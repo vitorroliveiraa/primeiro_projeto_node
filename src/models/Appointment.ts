@@ -7,7 +7,7 @@ class Appointment {
 
   date: Date;
 
-  constructor(serviceProvider: string, date: Date) {
+  constructor({ serviceProvider, date }: Omit<Appointment, 'id'>) {
     this.id = uuid();
     this.serviceProvider = serviceProvider;
     this.date = date;
